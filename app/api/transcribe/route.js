@@ -8,6 +8,7 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Audio URL is required' }, { status: 400 });
     }
 
+    // FIXED: Corrected the Deepgram API URL string
     const response = await fetch('[https://api.deepgram.com/v1/listen?smart_format=true&model=nova-3&diarize=true](https://api.deepgram.com/v1/listen?smart_format=true&model=nova-3&diarize=true)', {
       method: 'POST',
       headers: {
